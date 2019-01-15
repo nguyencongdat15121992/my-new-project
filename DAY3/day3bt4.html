@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <img src="img/1.jpg" width="304px" height="79px" name="hinh1" onclick="hinh(1)"><br>
+    <img src="img/4.jpg" width="304px" height="79px" name="hinh4" onclick="hinh(2)"><br>
+    <img src="img/7.jpg" width="304px" height="79px" name="hinh7" onclick="hinh(3)"><br>
+    <img src="img/11.jpg" width="304px" height="79px" name="hinh11" onclick="hinh(4)"><br>
+    <img src="img/15.jpg" width="304px" height="79px" name="hinh15" onclick="hinh(5)"><br>
+</div>
+
+
+
+</body>
+<script>
+    function hinh(hinhso) {
+        switch (hinhso) {
+            case 1:
+                document.hinh1.src= "img/"+(Math.floor(Math.random() * 3) + 1 )+".jpg";
+                break;
+            case 2 :
+                document.hinh4.src= "img/"+(Math.floor(Math.random() * 3) + 4 )+".jpg";
+                break;
+            case 3 :
+                document.hinh7.src= "img/"+(Math.floor(Math.random() * 3) + 7 )+".jpg";
+                break;
+            case 4 :
+                document.hinh11.src= "img/"+(Math.floor(Math.random() * 3) + 10 )+".jpg";
+                break;
+            case 5 :
+                document.hinh15.src= "img/"+(Math.floor(Math.random() * 3) + 13 )+".jpg";
+                break;
+        }
+    }
+</script>
+</html>
