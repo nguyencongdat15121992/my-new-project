@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var x = [-3,5,1,3,2,10];
+    var giatrilonnhat = x[0];
+    var vitri = 0
+    for(var i = 1; i < x.length; i++){
+        if(x[i] > giatrilonnhat){
+            giatrilonnhat = x[i];
+            vitri = i
+        }
+    }
+    alert("giá trị lớn nhất là : " + giatrilonnhat + " vị trí  " + vitri );
+</script>
+</body>
+</html>
