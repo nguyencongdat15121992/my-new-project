@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h4>BẠN CÓ YÊU KHÔNG?</h4>
+        <button onclick="yesabc();">YES</button>
+        <button  style="position: absolute" id="noabc" onmouseover="noabc();">NO</button>
+<script>
+    function yesabc() {
+        alert("TÔI YÊU BẠN RÂT NHIỀU");
+    }
+    function noabc() {
+        var x = Math.round(Math.random()*window.innerWidth);
+        var y = Math.round(Math.random()*window.innerHeight);
+            document.getElementById("noabc").style.top = x + 'px'
+            document.getElementById("noabc").style.left = y +'px'
+
+    }
+</script>
+
+
+
+</body>
+</html>
