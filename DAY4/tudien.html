@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tudien</title>
+</head>
+<body>
+<h4>Từ Điển</h4>
+<input id="tratu" placeholder="Nhập từ cần tra">
+<button onclick="tracuuketqua();">Tra cứu</button>
+<p id="kq">Kết Qủa Dịch</p>
+<script>
+    var tienganh =[ "home", "school" , "why" ];
+    var tiengviet = [ "nhà" , "trường" , "tại sao"];
+  function tracuuketqua() {
+      var a = document.getElementById("tratu").value ;
+      for ( let i = 0 ; i< tienganh.length ; i ++) {
+          if ( a === tienganh [i] ){
+              document.getElementById("kq").innerHTML = tiengviet[i] ;
+          }
+      }
+
+
+  }
+
+</script>
+</body>
+</html>
