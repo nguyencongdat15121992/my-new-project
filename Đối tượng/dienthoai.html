@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div name="Nokia">
+    <input id="input1">
+    <br>
+    <button name="nokia" onclick="clickdekiemtra(this.name);">kiểm tra</button>
+    <button name="nokia" onclick="clickdebattat(this.name);">bật tắt</button>
+    <button name="nokia" onclick="clickdexacpin(this.name);">xạc pin</button>
+    <button name="nokia" onclick="clickdeguitinnhan(this.name);">gửi tin nhắn</button>
+</div>
+<div name="Iphone">
+    <input id="input2">
+    <br>
+    <button name="iphone" onclick="clickdekiemtra(this.name);">kiểm tra</button>
+    <button name="iphone" onclick="clickdebattat(this.name);">bật tắt</button>
+    <button name="iphone" onclick="clickdexacpin(this.name);">xạc pin</button>
+    <button name="iphone" onclick="clickdeguitinnhan(this.name);">gửi tin nhắn</button>
+</div>
+
+ <script>
+     class Mobile {
+         constructor (manhinh){
+             this.nangluong = 20 ;
+             this.dangbat = false;
+             this.tindanhan = [ ];
+             this.manhinh = manhinh ;
+         }
+         kiemtra(){
+             this.manhinh.value = this.nangluong;
+         }
+         battat() {
+             if (this.dangbat === false){
+                 this.dangbat = true ;
+             } else {
+                 this.dangbat = false;
+             }
+         }
+         xacpin (){
+             if (this.nangluong <91){
+                 this.nangluong += 10 ;
+             } else {
+                 this.nangluong = 100 ;
+             }
+             alert("pin " + this.nangluong);
+         }
+         guitinnhan (phone){
+             phone.nhantinnhan(this.manhinh.value);
+         }
+
+         nhantinnhan(text) {
+             this.tindanhan.push(text);
+             this.manhinh.value = text;
+         }
+     }
+     var iphone =new Mobile(document.getElementById("input2"));
+     var nokia = new Mobile(document.getElementById("input1"));
+     function clickdekiemtra(name){
+         switch (name) {
+             case "nokia":
+                 nokia.kiemtra();
+                 break;
+             case "iphone":
+                 iphone.kiemtra();
+                 break;
+         }
+     }
+     function clickdebattat(name) {
+        switch (name) {
+            case "nokia":
+                nokia.battat();
+                break;
+            case "iphone":
+                iphone.battat();
+                break;
+        }
+     }
+     function clickdexacpin(name) {
+         switch (name) {
+             case "nokia":
+                 nokia.xacpin();
+                 break;
+             case "iphone":
+                 iphone.xacpin();
+                 break;
+         }
+     }
+     function clickdeguitinnhan(name) {
+         switch (name) {
+             case "nokia":
+                 nokia.guitinnhan(iphone);
+                 break;
+             case "iphone":
+                 iphone.guitinnhan(nokia);
+                 break;
+         }
+     }
+ </script>
+</body>
+</html>
